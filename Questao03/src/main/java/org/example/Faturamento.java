@@ -22,8 +22,6 @@ public class Faturamento {
             double somaFaturamento = 0.0;
             int diasComFaturamento = 0;
 
-            System.out.println(dadosList);
-
             //Cálculo do menor, maior e soma dos faturamentos
             for (Dados d : dadosList) {
                 double valor = d.getValor();
@@ -57,7 +55,7 @@ public class Faturamento {
 
 
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Algo deu errado!");
         }
     }
 }

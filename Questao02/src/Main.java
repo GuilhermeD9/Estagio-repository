@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     static long Fibonacci(int n) { //Método fibonacci
@@ -9,7 +11,11 @@ public class Main {
     }
 
     public static void main(String[] args) { //Main
-        int numeroVerificador = 2; //Número de entrada
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Digite um número inteiro para verificar se ele pertence a" +
+                " sequência de fibonacci!: ");
+        int numeroVerificador = scan.nextInt(); //Número de entrada
         boolean existeONumero = false; //Verifica se o número está na sequência
 
         for (int i = 0; i <= 30; i++) {
@@ -21,10 +27,10 @@ public class Main {
 
         if (!existeONumero) {
             System.out.println("O número " + numeroVerificador +
-                    " não pertence a sequência de fibonacci!");
+                    " NÃO pertence a sequência de fibonacci!");
         } else {
             System.out.println("O número " + numeroVerificador +
-                    " pertence a sequência de fibonacci!");
+                    " PERTENCE a sequência de fibonacci!");
         }
     }
 }
