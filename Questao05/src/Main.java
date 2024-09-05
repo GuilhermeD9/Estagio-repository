@@ -1,15 +1,18 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("Invertendo tuut");
+        Scanner scanner = new Scanner(System.in);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        System.out.print("Digite a palavra para ser invertida: ");
+        String palavra = scanner.nextLine();//Lê a palavra q será invertida
+
+        int n = palavra.length(); //Pega o tamanho da palavra
+        char vetor[] = palavra.toCharArray();//Cria um vetor de caracteres
+
+        for (int c = n; c > 0; c--) { //O for chama o tamanho da palavra até 0
+            System.out.print(vetor[c-1]);
         }
     }
 }
